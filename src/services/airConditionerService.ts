@@ -47,7 +47,7 @@ enum OptionalMode {
 
 export class AirConditionerService extends BaseService {
 
-  private temperatureUnit: TemperatureUnit = TemperatureUnit.Celsius;
+  private temperatureUnit: TemperatureUnit = TemperatureUnit.Farenheit;
 
   private thermostatService: Service;
   private fanService: Service;
