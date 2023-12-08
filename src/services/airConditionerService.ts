@@ -73,16 +73,6 @@ export class AirConditionerService extends BaseService {
       this.humidityService = this.setupHumiditySensor(platform, multiServiceAccessory);
     }
 
-
-    // Optional mode switch is exposed only if the related capability is suppoorted
-    if (this.isCapabilitySupported('custom.airConditionerOptionalMode')) {
-      this.optionalMode = OptionalMode[this.platform.config.OptionalModeForAirConditioners];
-
-      // Expose a switch for the optional mode. 
-      // If the selected optional mode is undefined or not supported, changes to the switch will have no effect.
-      this.optionalModeSwitchService = this.setupOptionalModeSwitch(platform, multiServiceAccessory);
-    }
-
   }
 
   private isCapabilitySupported(capability): boolean {
